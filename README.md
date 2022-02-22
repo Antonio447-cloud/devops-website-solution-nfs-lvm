@@ -269,14 +269,57 @@ After that, we check which port is used by the NFS and open it using Security Gr
 
 ## Configuring the Database Server
 
-    1. We Install MySQL server.
-    2. We create a database and name it tooling.
-    3. We create a database user and name it webaccess.
-    4. On a normal development environment we would grant permission to the webaccess user on the tooling database to do work from the webservers' subnet CIDR. However, since we are on testing stage we will grant access from everywhere just for now.
+We Install MySQL server:
 
-**NOTE:** Use `sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf` when editing bind address.
+`sudo apt update`
 
-**NOTE:** Use `GRANT ALL PRIVILEGES ON tooling.* TO 'webaccess'@'%' WITH GRANT OPTION;` and `FLUSH PRIVILGES;` when granting permission.
+`sudo apt install mysql-server -y`
+
+We create a database and name it tooling:
+
+`sudo mysql`
+
+`CREATE DATABASE tooling;`
+
+We make sure that our database was created:
+
+`SHOW DATABASES;`
+
+![show](./images/show-databases.png)
+
+We create a database user and name it webaccess:
+
+`CREATE USER 'webaccess'@'<web-server1-ipv4-CIDR>' IDENTIFIED BY 'password';`
+
+We grant privileges to the webaccess user:
+
+`GRANT ALL PRIVILEGES ON tooling.* TO 'webaccess'@'<web-server1-ipv4-CIDR>' WITH GRANT OPTION;`
+
+We reload the grant tables for the changes to take effect by running:
+
+`FLUSH PRIVILEGES;`
+
+We exit MySQL:
+
+`exit`
+
+- **NOTE**: *We can get the web servers' 1 IPv4 CIDR by going into the "Networking" tab and clicking on "Subnet ID"*:
+
+![cidr](./images/cidr.png)
+
+- We can see our web server 1 "IPv4 CIDR" on the right:
+
+![cidr](./images/ipv4-cidr.png)
+
+ Now we change the bind address from "127.0.0.1" to "0.0.0.0" so that it is reachable to all IPv4 addresses on the local machine:
+ 
+ `sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf` :
+
+![bind](./images/bind-address-before.png)
+
+- We can see the edited bind address below:
+
+![bind](./images/bind-address-after.png)
 
 ## Preparing the Web Servers
 
@@ -444,7 +487,7 @@ Disable SELinux (ideal for testing), restart our web server, and confirm that ou
  
  - and set SELINUX=disabled.
 
- Now, on our Ubunutu database server we run:
+ Now, on our Ubuntu database server we run:
 
  `sudo mysql`
 
