@@ -33,7 +33,7 @@ Based on the answer to these questions, we will be able to choose the right stor
 
 First, we need to create 3 RHEL instances for our 3 web servers, 1 Ubuntu instance for our database server, and 1 RHEL instance for our NFS server. Our AWS console should look like this:
 
-![aws](./images/instances-aws4.png)
+![aws](./images/instances-aws7.png)
 
 **NOTE**: *All of the instances should be on the same Availability Zone (AZ). In my case all of the instances are on the AZ: "us-east-2c".*
 
