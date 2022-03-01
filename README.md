@@ -526,7 +526,7 @@ To finish setting up the server, we run the following commands:
 
 We open our website our my browser:
  
-http://Web-Server-Public-IP-Address-or-Public-DNS-Name/login.php
+`http://Web-Server-Public-IP-Address-or-Public-DNS-Name/login.php`
 
 ![success](./images/success.png)
 
