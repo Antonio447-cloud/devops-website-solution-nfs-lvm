@@ -339,40 +339,37 @@ During the next steps we will do the following:
 
 **NOTE**: *Keep in mind our web servers are using the RHEL operating system.*
 
-So now we run:
+1.) So now we run:
 
 `sudo yum install nfs-utils nfs4-acl-tools -y`
 
-We mount /var/www/ and target the NFS server’s export for apps:
+2.) We mount /var/www/ and target the NFS server’s export for apps:
 
 `sudo mkdir /var/www`
 
 `sudo mount -t nfs -o rw,nosuid <NFS-Server-Private-IP-Address>:/mnt/apps /var/www`
 
-We verify that the NFS was mounted successfully by running:
+3.) We verify that the NFS was mounted successfully by running:
 
 `df -h`. 
 
-We also make sure that the changes will persist on the web server after reboot:
+4.) We also make sure that the changes will persist on the web server after reboot:
 
 `sudo vi /etc/fstab`
 
-Add the following line into the /etc/fstab file:
+5.) Add the following line into the /etc/fstab file:
 
 `<NFS-Server-Private-IP-Address>:/mnt/apps /var/www nfs defaults 0 0`
 
-We install Apache:
+6.) We install Apache:
 
 `sudo yum install httpd -y`
 
-We run Apache:
+7.) We run Apache:
 
 `sudo systemctl start httpd`
 
 **NOTE**: *Then we repeat steps 1-7 for the other 2 web servers.*
-
-**NOTE**: *So we start from: 
-`sudo yum install nfs-utils nfs4-acl-tools -y` until: `sudo systemctl start httpd` for the other 2 web servers.*
 
 We verify that our Apache files and directories are available on the web server in /var/www and also on the NFS server in /mnt/apps.
 
@@ -421,9 +418,9 @@ Then we run:
 
 `sudo systemctl daemon-reload`
 
-We fork the tooling source code from Darey.io Github Account to my Github account. (https://github.com/darey-io/tooling)
+Now you need to fork the "tooling" source code from Darey.io Github Account to your Github account. (https://github.com/darey-io/tooling)
 
-To fork it we click on "Fork" which is located on the top tight corner of GitHub repository:
+To fork it we click on "Fork" which is located on the top tight corner of the GitHub repository:
 
 ![github](./images/github-repo.png)
 
@@ -449,7 +446,7 @@ Then we deploy the tooling website’s code to the web server:
 
 `sudo cp -R tooling/html/* /var/www/html/`
 
-We ensure that the "html folder" from the repository is deployed to /var/www/html:
+We ensure that the "html folder" from the repository was deployed to /var/www/html:
 
 `ls -l /var/www/html`
 
