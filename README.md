@@ -12,7 +12,7 @@ step 3: https://github.com/Antonio447-cloud/jenkins-continuous-integration-step3
 
 step 4: https://github.com/Antonio447-cloud/SSL-TLS-cryptographic-protocol-new-dns-name-and-lb-step4
 
-- **NOTE**: *We will eventually automate these steps.*
+*We will eventually automate these steps.*
 
 -----------
     Happy learning!
