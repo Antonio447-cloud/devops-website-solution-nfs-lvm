@@ -2,9 +2,15 @@
 
 *Demonstration of how to create a website using a Network File System (NFS) for a shared storage solution and Logical Volume Management (LVM) to manage disk storage. The source code used on this project was retrieved from darey.io.*
 
-*Instructions on how to launch and connect to your EC2 instance using an SSH client:*
+- This is the first of four projects that are linked to each other through steps (this one is step 1) :
 
-https://github.com/Antonio447-cloud/MEAN-stack-angular
+step 1: https://github.com/Antonio447-cloud/devops-website-solution-using-nfs-and-lvm-step1 
+
+step 2: https://github.com/Antonio447-cloud/load-balancer-solution-using-apache-step2 
+
+step 3: https://github.com/Antonio447-cloud/jenkins-continuous-integration-step3
+
+step 4: https://github.com/Antonio447-cloud/SSL-TLS-cryptographic-protocol-new-dns-name-and-lb-step4
 
     Happy learning!
 -------------------------------------------------------------
@@ -13,23 +19,29 @@ https://github.com/Antonio447-cloud/MEAN-stack-angular
 
 We will be using the following components:
 
-    Infrastructure: AWS
-    Web servers: Linux: Red Hat Enterprise Linux 8
-    MySQL Database Server: Ubuntu 20.04
-    NFS Server: Red Hat Enterprise Linux 8
-    Programming Language: PHP
-    Code Repository: GitHub
-    Jenkins: A free and open source automation server used to build CI/CD pipelines.
+- Infrastructure: AWS
+- Web servers: Linux: Red Hat Enterprise Linux 8
+- MySQL Database Server: Ubuntu 20.04
+- NFS Server: Red Hat Enterprise Linux 8
+- Programming Language: PHP
+- Code Repository: GitHub
+- Jenkins: A free and open source automation server used to build CI/CD pipelines.
 
-**NOTE**: *Web servers share a common database and also access the same files using Network File System (NFS) as a shared file storage. Even though the NFS server might be located on a completely separate hardware, for web servers it will look like a local file system from where they can serve the same files. So it is important to know:*
+Web servers share a common database and they also access the same files using Network File System (NFS) as a shared file storage. 
 
-- What storage solution is suitable for what use cases. In order to do that, we will need to answer the following questions: 
+Even though the NFS server might be located on a completely separate hardware, for web servers it will look like a local file system from where they can serve the same files. Consequently, it is important to know:
 
-- What data will be stored? In what format? How this data will be accessed? By whom, from where, how frequently?
+- What storage solution is suitable for what use cases. In order figure that out, we will need to answer the following questions: 
+
+- What data will be stored? In what format? How will this data be accessed? By whom, from where, how frequently?
 
 Based on the answer to these questions, we will be able to choose the right storage system for our solution. 
 
 ## Preparing your EC2 Instances
+
+On the link below, you will find instructions on how to launch and connect to your EC2 instance using an SSH client: 
+
+https://github.com/Antonio447-cloud/MEAN-stack-angular
 
 First, we need to create 3 RHEL instances for our 3 web servers, 1 Ubuntu instance for our database server, and 1 RHEL instance for our NFS server. Our AWS console should look like this:
 
