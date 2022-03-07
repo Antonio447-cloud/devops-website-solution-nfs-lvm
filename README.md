@@ -2,9 +2,9 @@
 
 *Demonstration of how to create a website using a Network File System (NFS) for a shared storage solution and Logical Volume Management (LVM) to manage disk storage. The source code used on this project was retrieved from darey.io.*
 
-*We will implement a DevOps website solution that consists of 4 steps (this one is step 1)*
+- *We will implement a DevOps website solution that consists of 4 steps (this project is step 1):*
 
-step 1  https://github.com/Antonio447-cloud/devops-website-solution-using-nfs-and-lvm-step1 
+step 1:  https://github.com/Antonio447-cloud/devops-website-solution-using-nfs-and-lvm-step1 
 
 step 2: https://github.com/Antonio447-cloud/load-balancer-solution-using-apache-step2 
 
@@ -20,15 +20,16 @@ step 4: https://github.com/Antonio447-cloud/SSL-TLS-cryptographic-protocol-new-d
 
 ## Outline
 
-We will be using the following components:
+In this project we will be using the following:
 
-- Infrastructure: AWS
-- Web servers: Linux: Red Hat Enterprise Linux 8
-- MySQL Database Server: Ubuntu 20.04
-- NFS Server: Red Hat Enterprise Linux 8
+- Cloud Computing Platform: AWS
+- 3 Web servers: Linux: Red Hat Enterprise Linux 8
+- 1 MySQL Database Server: Ubuntu 20.04
+- 1 NFS Server: Red Hat Enterprise Linux 8
 - Programming Language: PHP
 - Code Repository: GitHub
-- Jenkins: A free and open source automation server used to build CI/CD pipelines.
+
+
 
 Web servers share a common database and they also access the same files using Network File System (NFS) as a shared file storage. 
 
@@ -182,7 +183,7 @@ We create mount points on the /mnt directory for the logical volumes as follows:
 
 - Mount lv-logs on /mnt/logs to be used by webserver logs.
 
-- Mount lv-opt on /mnt/opt to be used by Jenkins server in upcoming projects.
+- Mount lv-opt on /mnt/opt to be used by the Jenkins server in upcoming projects.
 
 So before mounting run:
 
