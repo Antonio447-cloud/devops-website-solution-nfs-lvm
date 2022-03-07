@@ -2,7 +2,7 @@
 
 *Demonstration of how to create a website using a Network File System (NFS) for a shared storage solution and Logical Volume Management (LVM) to manage disk storage. The source code used on this project was retrieved from darey.io.*
 
-- *We will implement a DevOps website solution that consists of 4 steps (this project is step 1):*
+*We will implement a DevOps website solution that consists of 4 steps (this project is step 1):*
 
 step 1:  https://github.com/Antonio447-cloud/devops-website-solution-using-nfs-and-lvm-step1 
 
