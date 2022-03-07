@@ -29,7 +29,9 @@ In this project we will be using the following:
 - Programming Language: PHP
 - Code Repository: GitHub
 
-**NOTE**: Web servers share a common database and they also access the same files using Network File System (NFS) as a shared file storage. Even though the NFS server might be located on a completely separate hardware, for web servers it will look like a local file system from where they can serve the same files. Consequently, it is important to know:
+## Important
+
+Web servers share a common database and they also access the same files using Network File System (NFS) as a shared file storage. Even though the NFS server might be located on a completely separate hardware, for web servers it will look like a local file system from where they can serve the same files. Consequently, it is important to know:
 
 - What storage solution is suitable for what use cases. In order figure that out, we will need to answer the following questions: 
 
