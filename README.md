@@ -35,7 +35,7 @@ Web servers share a common database and they also access the same files using Ne
 
 - What storage solution is suitable for what use cases. In order figure that out, we will need to answer the following questions: 
 
-- What data will be stored? In what format? How will this data be accessed? By whom, from where, how frequently?
+- What data will be stored? In what format? How will this data be accessed? By whom? From where? How frequently?
 
 Based on the answer to these questions, we will be able to choose the right storage system for our solution. 
 
