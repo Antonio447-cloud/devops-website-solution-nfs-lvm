@@ -2,17 +2,17 @@
 
 *Demonstration of how to create a website using a Network File System (NFS) for a shared storage solution and Logical Volume Management (LVM) to manage disk storage. The source code used on this project was retrieved from darey.io.*
 
-*We will implement a DevOps website solution that consists of 4 steps. This project represents "step 1":*
+*We will implement a DevOps website solution that consists of 4 projects (This one is project 1):*
 
-step 1:  https://github.com/Antonio447-cloud/devops-website-solution-using-nfs-and-lvm-step1 
+Project 1:  https://github.com/Antonio447-cloud/devops-website-solution-using-nfs-and-lvm-project1
 
-step 2: https://github.com/Antonio447-cloud/load-balancer-solution-using-apache-step2 
+Project 2: https://github.com/Antonio447-cloud/load-balancer-solution-using-apache-project2
 
-step 3: https://github.com/Antonio447-cloud/jenkins-continuous-integration-step3
+Project 3: https://github.com/Antonio447-cloud/jenkins-continuous-integration-project3
 
-step 4: https://github.com/Antonio447-cloud/SSL-TLS-cryptographic-protocol-new-dns-name-and-lb-step4
+Project 4: https://github.com/Antonio447-cloud/SSL-TLS-cryptographic-protocol-new-dns-name-and-lb-project4
 
-- *We will eventually automate these steps.*
+- *We will eventually automate routine tasks of these projects.*
 
 -----------------------------------------------------------
     Happy learning!
@@ -22,9 +22,9 @@ step 4: https://github.com/Antonio447-cloud/SSL-TLS-cryptographic-protocol-new-d
 In this project we will be using the following:
 
 - Cloud Computing Platform: AWS
-- 3 Web servers: Linux: Red Hat Enterprise Linux 8
-- 1 MySQL Database Server: Ubuntu 20.04
+- 3 Web Servers: Red Hat Enterprise Linux 8
 - 1 NFS Server: Red Hat Enterprise Linux 8
+- 1 MySQL Database Server: Ubuntu 20.04
 - Programming Language: PHP
 - Code Repository: GitHub
 
